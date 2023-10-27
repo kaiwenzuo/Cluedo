@@ -1,5 +1,3 @@
-
-
 # Those who have been suggested will still be suggested
 import random
 

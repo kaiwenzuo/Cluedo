@@ -1,5 +1,4 @@
 from game_core import *
-import random
 from random_agent import random_policy
 
 
