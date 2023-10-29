@@ -18,10 +18,10 @@ def win_rate(n_player, n):
         winner = game_run(GameModel(n_player))
         win_list[winner - 1] += 1
 
-        # 打印每次迭代后的胜率
-        print(f"After game {i + 1}, win rates: {[x / (i + 1) for x in win_list]}")
+        # Print the winning rate after each iteration
+        print(f"After game {i + 1}, the win rates: {[x / (i + 1) for x in win_list]}")
 
-    # 计算并打印最终胜率
+    # Calculate and print the final winning rate
     final_win_rates = [x / n for x in win_list]
     print(f"Final win rates after {n} games: {final_win_rates}")
 

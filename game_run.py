@@ -20,4 +20,4 @@ def game_run(model):
 
 if __name__ == "__main__":
     game_run(GameModel(3))
-    win_rate(3, 10000)
+    win_rate(3, 1000)
