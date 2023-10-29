@@ -1,5 +1,6 @@
 from game_core import *
 from random_agent import random_policy
+from winning_rate import win_rate
 
 
 def game_run(model):
@@ -8,7 +9,7 @@ def game_run(model):
     while model.state.is_terminal() is None:
         action = random_policy(state.cards)
         print('Player {} suggests {}'.format(player, action))
-        state.suggest(player,action)
+        state.suggest(player, action)
         state.step += 1
         state.if_accuse(player)
         player = state.next_player(player)
@@ -16,5 +17,7 @@ def game_run(model):
         print('In the step {}, the winner is player {}'.format(state.step, model.state.is_terminal()))
         return model.state.is_terminal()
 
+
 if __name__ == "__main__":
     game_run(GameModel(3))
+    win_rate(3, 10000)
